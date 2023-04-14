@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: eksdemo-crystal
+  name: ecsdemo-crystal
 spec:
   selector:
-    app: eksdemo-crystal
+    app: ecsdemo-crystal
   ports:
    -  protocol: TCP
       port: 80

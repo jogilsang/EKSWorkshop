@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eksdemo-nodejs
+  name: ecsdemo-nodejs
   labels:
-    app: eksdemo-nodejs
+    app: ecsdemo-nodejs
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: eksdemo-nodejs
+      app: ecsdemo-nodejs
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: eksdemo-nodejs
+        app: ecsdemo-nodejs
     spec:
       containers:
       - image: brentley/ecsdemo-nodejs:latest
