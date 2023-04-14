@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecsdemo-crystal
+  name: eksdemo-crystal
   labels:
-    app: ecsdemo-crystal
+    app: eksdemo-crystal
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ecsdemo-crystal
+      app: eksdemo-crystal
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ecsdemo-crystal
+        app: eksdemo-crystal
     spec:
       containers:
       - image: brentley/ecsdemo-crystal:latest
