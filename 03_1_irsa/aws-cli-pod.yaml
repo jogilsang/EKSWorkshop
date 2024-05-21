@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: aws-cli
+  name: aws-cli-pod
   namespace: irsa
 spec:
   serviceAccountName: my-serviceaccount-for-pod
   containers:
-    - name: aws-cli
+    - name: aws-cli-pod
       image: 'amazon/aws-cli:latest'
       command:
         - sleep
