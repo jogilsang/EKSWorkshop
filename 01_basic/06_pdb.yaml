@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: nginx-pdb
+spec:
+  maxUnavailable: 1  # 최대 불가용 Pod 수 (1개 Pod까지 다운 가능)
+  selector:
+    matchLabels:
+      app: nginx  # 해당 라벨을 가진 Pod에 대해 PDB 
